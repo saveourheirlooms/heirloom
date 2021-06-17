@@ -3,6 +3,7 @@ import Web3 from "web3";
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import Report from "../src/contracts/hei.json"
+
 class Tokens extends Component {
 
   async componentWillMount() {
@@ -51,6 +52,10 @@ class Tokens extends Component {
     }
   }
 
+ async buy(){
+    console.log("asdsdfdsf")
+  }
+
     async get(){
     const length = await this.state.contract.methods.totalSupply().call()
     const name = await this.state.contract.methods.name().call()
@@ -91,13 +96,18 @@ class Tokens extends Component {
           `
       })
     }
+
+    await this.state.contract.methods.buyToken(1).send({from: this.state.account}).on("confirmation",(r) =>{
+        console.log("sold")
+    })
   }
 
-  /*async buy(tokenID){
-     await this.state.contract.methods.transferFrom("0x14Aa020C4bB7521C2e908e79BB2E49cBb2675551", metadata, metadata).send({from: "0x14Aa020C4bB7521C2e908e79BB2E49cBb2675551"}).on("confirmation",(r) =>{
-        console.log("success")
-    })
-  }*/
+
+
+  async buy(){
+    console.log("")
+  }
+ 
 
   render() {
 
@@ -105,9 +115,10 @@ class Tokens extends Component {
       <div class="container">
       <div class="mx-auto" style={{width: "1080px"}}>
          <h1 class="mb-sm-4 display-4 fw-light lh-sm fs-4 fs-lg-6 fs-xxl-7">NFTs</h1>
-         <div class="row"></div>
+         <div class="row">
+          </div>
       </div>
-       </div>
+    </div>
     );
   }
 }
