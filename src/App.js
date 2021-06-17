@@ -122,8 +122,8 @@ const Home = () => (
     <div class="container">
   <div class="mx-auto" style={{width: "1080px"}}>
     <div class="slider clearfix" style={{marginTop: "100px"}}>
-      <h1 class="mb-sm-4 display-4 fw-light lh-sm fs-4 fs-lg-6 fs-xxl-7">Buy NFT Tokens and <br /> <span class="text-primary">Save </span><span class="">Our Heirloom </span></h1>
-      <h2 class="font-weight-light mt-5">Lorem ipsum dolor sit amet </h2>
+      <h1 class="mb-sm-4 display-4 fw-light lh-sm fs-4 fs-lg-6 fs-xxl-7"><span class="">Save </span><span class="">Our <span class=""  style={{fontFamily: '"Sansita Swashed", cursive'}}>Heirlooms </span> </span><br /></h1>
+      <h2 class="font-weight-light mt-5">Discover the most meaningful NFTs.<br /> Support our cultural heritage.</h2>
       <div type="button" class="btn btn-outline-primary mt-5">
         <h5 class="font-weight-light">Explore Projects</h5>
       </div>

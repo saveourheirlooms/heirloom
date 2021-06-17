@@ -122,7 +122,7 @@ class Mint extends Component {
           <input type="file" class="form-control" onChange={this.captureFile} aria-describedby="projectName" />
           <small id="projectName" class="form-text text-muted">General Name for your project</small>
         </div>
-        <input type="submit" class="d-inline-block"/>
+        <input type="submit" class="d-inline-block btn btn-primary" value="Mint"/>
       </form>
     </div>
   </div>

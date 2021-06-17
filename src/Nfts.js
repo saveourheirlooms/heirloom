@@ -80,7 +80,7 @@ class Tokens extends Component {
             <div class="card-body">
               <h5 class="card-title">${item.name}</h5>
               <p class="card-text">${item.description}</p>
-              <button href="#" id="btn" class="btn btn-primary">Buy ${symbol}</button>
+              <button href="#" id="btn" class="btn btn-primary">Buy</button>
               <div class="float-right" style="line-height: 40px;">
                 $10
               </div>
