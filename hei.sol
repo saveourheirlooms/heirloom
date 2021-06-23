@@ -67,19 +67,12 @@ contract hei is ERC721, ERC721Enumerable, ERC721URIStorage, AccessControl {
         return newItemId;
       }
       
-           // by a token by passing in the token's id
       function buyToken(uint256 _tokenId) public payable {
-        // check if the function caller is not an zero account address
         require(msg.sender != address(0));
-        // check if the token id of the token being bought exists or not
         require(_exists(_tokenId));
-        // get the token's owner
         address tokenOwner = ownerOf(_tokenId);
-        // token's owner should not be an zero address account
         require(tokenOwner != address(0));
-        // the one who wants to buy the token should not be the token's owner
         require(tokenOwner != msg.sender);
-        // transfer the token from owner to the caller of the function (buyer)
         _transfer(tokenOwner, msg.sender, _tokenId);
 
       }
