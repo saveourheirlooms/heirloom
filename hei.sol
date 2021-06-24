@@ -58,6 +58,7 @@ contract hei is ERC721, ERC721Enumerable, ERC721URIStorage, AccessControl {
       public
       returns (uint256)
       {
+        require(hasRole(MINTER_ROLE, msg.sender));
         require(hashes[hash] != 1);
         hashes[hash] = 1;
         _tokenIdCounter.increment();
